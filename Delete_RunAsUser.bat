@@ -1,0 +1,1 @@
+del "C:\Windows\SysWOW64\drivers\Apps\runasuser.exe"
