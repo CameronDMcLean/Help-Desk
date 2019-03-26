@@ -1,17 +1,12 @@
- <# Script to add new users to appropriate groups
+﻿ <# Script to add new users to appropriate groups
  Created by Cameron McLean for personal use
 
 # To-do:
 -Add support for moving users in-script?
 -Add confirmation from tech & read-host
+-Add input validation stuff - wildcard, already existing, list of blocked accounts, if account exists, etc
 
 #Any pseudo code if necessary
-
-Add in office selection: split before resources location & list sub groups, prompt tech for options
-
-Prompt user for 
-
-
 #>
 
 #Declare variables
@@ -37,7 +32,6 @@ do  {
     $ADComputers"
     $NewComputer = Read-Host "Enter computer's hostname, or leave blank to exit"
 
-    #Add input validation stuff here - wildcard, already existing, list of blocked accounts, if account exists, etc
     $ADComputers += $NewComputer
 } while ($NewComputer) #Loop will run at least once, then close when $NewComputer is false (left blank)
 
